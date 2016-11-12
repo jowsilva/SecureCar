@@ -57,7 +57,7 @@ public class Principal extends JFrame {
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 
-		JMenu mnArquivo = new JMenu("Arquivo");
+		JMenu mnArquivo = new JMenu("Cadastros");
 		mnArquivo.setFont(new Font("Arial", Font.PLAIN, 11));
 		menuBar.add(mnArquivo);
 
@@ -85,6 +85,46 @@ public class Principal extends JFrame {
 		JMenuItem mntmCadastroDeSeguro = new JMenuItem("Cadastro de Seguro");
 		mntmCadastroDeSeguro.setFont(new Font("Arial", Font.PLAIN, 11));
 		mnArquivo.add(mntmCadastroDeSeguro);
+		
+		JMenu mnAtualizaes = new JMenu("Atualiza\u00E7\u00F5es");
+		mnAtualizaes.setFont(new Font("Arial", Font.PLAIN, 11));
+		menuBar.add(mnAtualizaes);
+		
+		JMenuItem mntmAtualizarCadastroDe = new JMenuItem("Atualizar Titular");
+		mntmAtualizarCadastroDe.setFont(new Font("Arial", Font.PLAIN, 11));
+		mnAtualizaes.add(mntmAtualizarCadastroDe);
+		
+		JMenuItem mntmAtualizarCadastroDe_1 = new JMenuItem("Atualizar Seguro");
+		mntmAtualizarCadastroDe_1.setFont(new Font("Arial", Font.PLAIN, 11));
+		mnAtualizaes.add(mntmAtualizarCadastroDe_1);
+		
+		JMenu mnExcluses = new JMenu("Exclus\u00F5es");
+		mnExcluses.setFont(new Font("Arial", Font.PLAIN, 11));
+		menuBar.add(mnExcluses);
+		
+		JMenuItem mntmExcluirCadastroDe = new JMenuItem("Excluir Titular");
+		mntmExcluirCadastroDe.setFont(new Font("Arial", Font.PLAIN, 11));
+		mnExcluses.add(mntmExcluirCadastroDe);
+		
+		JMenuItem mntmExcluirCadastroDe_1 = new JMenuItem("Excluir Seguro");
+		mntmExcluirCadastroDe_1.setFont(new Font("Arial", Font.PLAIN, 11));
+		mnExcluses.add(mntmExcluirCadastroDe_1);
+		
+		JMenu mnConsultas = new JMenu("Consultas");
+		mnConsultas.setFont(new Font("Arial", Font.PLAIN, 11));
+		menuBar.add(mnConsultas);
+		
+		JMenuItem mntmConsultarTitulares = new JMenuItem("Consultar Titulares");
+		mntmConsultarTitulares.setFont(new Font("Arial", Font.PLAIN, 11));
+		mnConsultas.add(mntmConsultarTitulares);
+		
+		JMenuItem mntmConsultarSeguros = new JMenuItem("Consultar Seguros");
+		mntmConsultarSeguros.setFont(new Font("Arial", Font.PLAIN, 11));
+		mnConsultas.add(mntmConsultarSeguros);
+		
+		JMenu mnSair = new JMenu("Sair");
+		mnSair.setFont(new Font("Arial", Font.PLAIN, 11));
+		menuBar.add(mnSair);
 
 	}
 }
