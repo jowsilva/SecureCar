@@ -19,6 +19,7 @@ import javax.swing.border.EtchedBorder;
 import javax.swing.border.TitledBorder;
 import javax.swing.text.MaskFormatter;
 import javax.swing.SwingConstants;
+import javax.swing.JFrame;
 
 public class CadTitular extends JInternalFrame {
 	private JTextField textFieldNome;
@@ -51,6 +52,9 @@ public class CadTitular extends JInternalFrame {
 	 * Create the frame.
 	 */
 	public CadTitular() {
+		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		setResizable(true);
+		setClosable(true);
 		
 		MaskFormatter mascaraData = null;
 		try {
@@ -77,21 +81,21 @@ public class CadTitular extends JInternalFrame {
 		}
 		setBounds(100, 100, 640, 480);
 		
-		JDesktopPane desktopPane = new JDesktopPane();
-		desktopPane.setBackground(Color.LIGHT_GRAY);
-		getContentPane().add(desktopPane, BorderLayout.CENTER);
-		desktopPane.setLayout(null);
+		JPanel panelBackground = new JPanel();
+		panelBackground.setBackground(Color.LIGHT_GRAY);
+		getContentPane().add(panelBackground, BorderLayout.CENTER);
+		panelBackground.setLayout(null);
 		
 		JLabel lblCadastroDeTitular = new JLabel("CADASTRO DE TITULAR");
 		lblCadastroDeTitular.setBounds(235, 17, 125, 14);
-		desktopPane.add(lblCadastroDeTitular);
+		panelBackground.add(lblCadastroDeTitular);
 		lblCadastroDeTitular.setFont(new Font("Arial", Font.BOLD, 11));
 		
 		JPanel panel = new JPanel();
 		panel.setBounds(10, 42, 604, 99);
 		panel.setBackground(Color.LIGHT_GRAY);
 		panel.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null), "Informa\u00E7\u00F5es Pessoais", TitledBorder.LEADING, TitledBorder.TOP, null));
-		desktopPane.add(panel);
+		panelBackground.add(panel);
 		panel.setLayout(null);
 		
 		JLabel lblNome = new JLabel("Nome:");
@@ -218,7 +222,7 @@ public class CadTitular extends JInternalFrame {
 		panelEndereco.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null), "Endere\u00E7o", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		panelEndereco.setBackground(Color.LIGHT_GRAY);
 		panelEndereco.setBounds(10, 152, 604, 76);
-		desktopPane.add(panelEndereco);
+		panelBackground.add(panelEndereco);
 		panelEndereco.setLayout(null);
 		
 		JLabel lblLogradouro = new JLabel("Logradouro:");
@@ -285,7 +289,7 @@ public class CadTitular extends JInternalFrame {
 		JButton btnCadastrar = new JButton("CADASTRAR");
 		btnCadastrar.setFont(new Font("Arial", Font.PLAIN, 11));
 		btnCadastrar.setBounds(506, 417, 108, 23);
-		desktopPane.add(btnCadastrar);
+		panelBackground.add(btnCadastrar);
 
 	}
 }
