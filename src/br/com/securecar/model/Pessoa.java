@@ -1,5 +1,7 @@
 package br.com.securecar.model;
 
+import java.time.LocalDate;
+
 public class Pessoa {
 
 	protected String nome;
@@ -7,7 +9,7 @@ public class Pessoa {
 	protected String cpf;
 	protected String estadoCivil;
 	protected String sexo;
-	protected String dataNascimento;
+	protected LocalDate dataNascimento;
 	protected String email;
 	protected String telefone;
 	protected String logradouro;

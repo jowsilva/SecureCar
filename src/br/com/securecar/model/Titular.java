@@ -1,19 +1,21 @@
 package br.com.securecar.model;
 
+import java.time.LocalDate;
+
 public class Titular extends Pessoa {
 
-	private String dataCadastro;
+	private LocalDate dataCadastro;
 	private String profissão;
 	private String situação;
 
 	/*
 	 * Métodos Getter's and Setter's
 	 */
-	public String getDataCadastro() {
+	public LocalDate getDataCadastro() {
 		return dataCadastro;
 	}
 
-	public void setDataCadastro(String dataCadastro) {
+	public void setDataCadastro(LocalDate dataCadastro) {
 		this.dataCadastro = dataCadastro;
 	}
 
