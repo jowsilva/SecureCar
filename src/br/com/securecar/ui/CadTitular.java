@@ -301,11 +301,13 @@ public class CadTitular extends JInternalFrame {
 		JButton btnCancelar = new JButton("CANCELAR");
 		btnCancelar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent cancelar) {
+				
+				setVisible(false);
 
 			}
 		});
 		btnCancelar.setFont(new Font("Arial", Font.PLAIN, 11));
-		btnCancelar.setBounds(407, 417, 89, 23);
+		btnCancelar.setBounds(400, 417, 96, 23);
 		panelBackground.add(btnCancelar);
 
 	}

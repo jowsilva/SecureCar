@@ -2,7 +2,7 @@ package br.com.securecar.model;
 
 import java.time.LocalDate;
 
-public class Pessoa {
+public abstract class Pessoa {
 
 	protected String nome;
 	protected String identidade;
@@ -17,4 +17,5 @@ public class Pessoa {
 	protected String cidade;
 	protected String estado;
 	protected String cep;
+
 }
